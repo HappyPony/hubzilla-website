@@ -1,4 +1,73 @@
-<div class="intro-body">
+<style>
+	.intro-body {
+		padding-top: 100px;
+	}
+	#news-sticker {
+		position: relative;
+		top: -150px;
+		left: 60%;
+		float: outside;
+		//right: 10%;
+		//z-index: 1;
+	}
+	#news-sticker ul li a:hover,#news-sticker ul li a:focus{
+		box-shadow:10px 10px 7px rgba(0,0,0,.7);
+		-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+		-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+		-webkit-transform: scale(1.25);
+		-moz-transform: scale(1.25);
+		-o-transform: scale(1.25);
+		position:relative;
+		z-index:5;
+	}
+	#news-sticker h2,p{
+		font-size:100%;
+		font-weight:normal;
+	}
+	#news-sticker ul,li{
+		list-style:none;
+	}
+	#news-sticker ul{
+		overflow:hidden;
+		padding:3em;
+	}
+	#news-sticker ul li a{
+		text-decoration:none;
+		color:#FFF;
+		background:#3a3d60;
+		display:block;
+		height:10em;
+		width:10em;
+		padding:1em;
+		-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+		-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+		box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+		-moz-transition:-moz-transform .15s linear;
+		-o-transition:-o-transform .15s linear;
+		-webkit-transition:-webkit-transform .15s linear;
+	}
+	#news-sticker ul li{
+		margin:1em;
+		float:left;
+	}
+	#news-sticker ul li h2{
+		font-size:1.0em;
+		font-weight:bold;
+		//padding-bottom:10px;
+	}
+	#news-sticker ul li p{
+		font-family:"Reenie Beanie",arial,sans-serif;
+		font-size:0.9em;
+	}
+	#news-sticker ul li a{
+		-webkit-transform: rotate(-6deg);
+		-o-transform: rotate(-6deg);
+		-moz-transform:rotate(-6deg);
+	}
+	@media(min-width:767px) {
+	}
+</style>
+<div class="intro-body" >
     <div class="container">
         <div class="row">
             <div>
@@ -20,6 +89,16 @@
                     <a href="#learn" class="btn btn-circle page-scroll">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
+					<div id="news-sticker">
+						<ul>
+							<li>
+								<a href="https://github.com/redmatrix/hubzilla/releases/tag/2.0">
+									<h2>Hubzilla 2.0 released</h2>
+									<p>Get it while it's hot!</p>
+								</a>
+							</li>
+						</ul>					
+					</div>
                 </div>
             </div>
         </div>
