@@ -1,0 +1,6 @@
+Copyright (c) 2015 Iko https://ikomi.me/
+
+This work is licensed under a Creative Commons Attribution 4.0 International License
+https://creativecommons.org/licenses/by/4.0/
+
+* For selective adaptation, such as a blog/app icon, it is not necessary to credit or backlink.
