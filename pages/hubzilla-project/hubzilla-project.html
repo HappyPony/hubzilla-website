@@ -1,0 +1,815 @@
+<html>
+	<head>
+		<title>Hubzilla</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Theme CSS -->
+    <link href="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/css/grayscale.min.css" rel="stylesheet" type="text/css">
+
+		<style>
+			/*!
+		 * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+		 * Code licensed under the Apache License v2.0.
+		 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+		 */
+
+			body {
+				width: 100%;
+				height: 100%;
+				font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				color: #fff;
+				background-color: #43488A;
+			}
+
+			html {
+				width: 100%;
+				height: 100%;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin: 0 0 35px;
+				text-transform: uppercase;
+				font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+
+			p {
+				margin: 0 0 25px;
+				font-size: 18px;
+				line-height: 1.5;
+			}
+
+			@media(min-width:768px) {
+				p {
+					margin: 0 0 35px;
+					font-size: 20px;
+					line-height: 1.6;
+				}
+			}
+
+			a {
+				color: #66512c;// #42dca3;
+				-webkit-transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+			}
+
+			a:hover,
+			a:focus {
+				text-decoration: none;
+				color: #7c6335; //#bb9b62; // #66512c ; // #1d9b6c;
+			}
+
+			img.hubzillabanner {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 35px;
+			}
+
+			@media(max-width:595px) {
+				img.hubzillabanner {  
+					width: 100%;
+				}
+			}
+
+			.light {
+				font-weight: 400;
+			}
+
+			.navbar-custom {
+				margin-bottom: 0;
+				border-bottom: 1px solid rgba(255,255,255,.3);
+				text-transform: uppercase;
+				font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				background-color: #43488A;
+			}
+
+			.navbar-custom .navbar-brand {
+				font-weight: 700;
+			}
+
+			.navbar-custom .navbar-brand:focus {
+				outline: 0;
+			}
+
+			.navbar-custom .navbar-brand .navbar-toggle {
+				padding: 4px 6px;
+				font-size: 16px;
+				color: #fff;
+			}
+
+			.navbar-custom .navbar-brand .navbar-toggle:focus,
+			.navbar-custom .navbar-brand .navbar-toggle:active {
+				outline: 0;
+			}
+
+			.navbar-custom a {
+				color: #fff;
+			}
+
+			.navbar-custom .nav li a {
+				-webkit-transition: background .3s ease-in-out;
+				-moz-transition: background .3s ease-in-out;
+				transition: background .3s ease-in-out;
+			}
+
+			.navbar-custom .nav li a:hover {
+				outline: 0;
+				color: rgba(255,255,255,.8);
+				background-color: transparent;
+			}
+
+			.navbar-custom .nav li a:focus,
+			.navbar-custom .nav li a:active {
+				outline: 0;
+				background-color: transparent;
+			}
+
+			.navbar-custom .nav li.active {
+				outline: 0;
+			}
+
+			.navbar-custom .nav li.active a {
+				background-color: rgba(255,255,255,.3);
+			}
+
+			.navbar-custom .nav li.active a:hover {
+				color: #fff;
+			}
+
+			@media(min-width:768px) {
+				.navbar-custom {
+					padding: 20px 0;
+					border-bottom: 0;
+					letter-spacing: 1px;
+					background: 0 0;
+					-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+					-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+					transition: background .5s ease-in-out,padding .5s ease-in-out;
+				}
+
+				.navbar-custom.top-nav-collapse {
+					padding: 0;
+					border-bottom: 1px solid rgba(255,255,255,.3);
+					background: #43488A;
+				}
+			}
+
+			.intro {
+				display: table;
+				width: 100%;
+				height: auto;
+				padding: 100px 0;
+				text-align: center;
+				color: #fff;
+				background: url(https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/bggrid.png) fixed;
+				background-color: #43488A;
+				/*    -webkit-background-size: cover;
+					-moz-background-size: cover;
+					background-size: cover;
+					-o-background-size: cover;*/
+			}
+
+			.intro .intro-body {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.intro .intro-body .brand-heading {
+				font-size: 40px;
+			}
+
+			.intro .intro-body .intro-text {
+				font-size: 18px;
+			}
+
+			@media(min-width:768px) {
+				.intro {
+					height: 100%;
+					padding: 0;
+				}
+
+				.intro .intro-body .brand-heading {
+					font-size: 100px;
+				}
+
+				.intro .intro-body .intro-text {
+					font-size: 26px;
+				}
+			}
+
+			.btn-circle {
+				width: 70px;
+				height: 70px;
+				margin-top: 15px;
+				padding: 14px 16px;
+				border: 2px solid #fff;
+				border-radius: 100%!important;
+				font-size: 40px;
+				color: #fff;
+				background: 0 0;
+				-webkit-transition: background .3s ease-in-out;
+				-moz-transition: background .3s ease-in-out;
+				transition: background .3s ease-in-out;
+			}
+
+			.btn-circle:hover,
+			.btn-circle:focus {
+				outline: 0;
+				color: #fff;
+				background: rgba(255,255,255,.1);
+			}
+
+			.btn-circle i.animated {
+				-webkit-transition-property: -webkit-transform;
+				-webkit-transition-duration: 1s;
+				-moz-transition-property: -moz-transform;
+				-moz-transition-duration: 1s;
+			}
+
+			.btn-circle:hover i.animated {
+				-webkit-animation-name: pulse;
+				-moz-animation-name: pulse;
+				-webkit-animation-duration: 1.5s;
+				-moz-animation-duration: 1.5s;
+				-webkit-animation-iteration-count: infinite;
+				-moz-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-moz-animation-timing-function: linear;
+			}
+
+
+			@-webkit-keyframes pulse {    
+				0% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+
+				50% {
+					-webkit-transform: scale(1.2);
+					transform: scale(1.2);
+				}
+
+				100% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			@-moz-keyframes pulse {    
+				0 {
+					-moz-transform: scale(1);
+					transform: scale(1);
+				}
+
+				50% {
+					-moz-transform: scale(1.2);
+					transform: scale(1.2);
+				}
+
+				100% {
+					-moz-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			.content-section {
+				padding-top: 0px;
+			}
+			.learn-section {
+				padding-top: 60px;
+
+			}
+			.learn-section p {
+				font-size: 1.2em;
+			}
+			.faq-section {
+				padding-top: 60px;
+
+			}
+			.faq-section p {
+				font-size: 1.2em;
+			}
+			.download-section {
+				width: 100%;
+				padding: 10em 0;
+				color: #fff;
+				background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/source_code_bkgd.png) repeat 0 0, url(https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/source_code_bkgd.png) no-repeat center center fixed;
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.7)), color-stop(100%,rgba(0,0,0,0.7))), url(https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/source_code_bkgd.png) no-repeat center center fixed;
+				background-color: #000;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+				-o-background-size: cover;
+			}
+
+			.discover-section {
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 50px 0;
+				color: #43488A;
+				background-color: #FFF;
+			}
+			.discover-section h3 {
+				padding-top: 20px;
+			}
+
+			.discover-section img{
+				position: relative;
+			}
+
+			.hover-zoom:hover {
+				transform:scale(1.2,1.2);
+				transform-origin:50% 50%;
+				border-radius: 0%;
+				z-index: 1;
+			}
+			.img-circle {
+				border: 2px;
+				border-radius: 0%;
+
+			}
+			.discover-section p {
+				font-size: 1.2em;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+
+			.develop-section {
+				width: 100%;
+				padding: 50px 0;
+				color: #43488A;
+				background-color: #FFF;
+			}
+
+			.donate-section {
+				display: table;
+				width: 100%;
+				height: auto;
+				padding: 100px 0;
+				text-align: center;
+				color: #fff;
+				background: url(https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/bggrid.png) fixed;
+				background-color: #43488A;
+				/*    -webkit-background-size: cover;
+					-moz-background-size: cover;
+					background-size: cover;
+					-o-background-size: cover;*/
+			}
+
+			@media(min-width:767px) {
+				.content-section {
+					padding-top: 0px;
+				}
+
+				.download-section .develop-section .donate-section{
+					padding: 15em 0;
+				}
+
+			}
+
+			.btn {
+				border-radius: 0;
+				text-transform: uppercase;
+				font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-weight: 400;
+				-webkit-transition: all .3s ease-in-out;
+				-moz-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;
+			}
+
+			.btn-default {
+				border: 1px solid #FFFFFF ; //#42dca3;
+				color: #FFFFFF; //#42dca3;
+				background-color: #43488A;
+			}
+
+			.btn-default:hover,
+			.btn-default:focus {
+				border: 1px solid #43488A ;//#42dca3;
+				outline: 0;
+				color: #43488A;
+				background-color: #FFFFFF ;//#42dca3;
+			}
+
+			ul.banner-social-buttons {
+				margin-top: 0;
+			}
+
+			@media(max-width:1199px) {
+				ul.banner-social-buttons {
+					margin-top: 15px;
+				}
+			}
+
+			@media(max-width:767px) {
+				ul.banner-social-buttons li {
+					display: block;
+					margin-bottom: 20px;
+					padding: 0;
+				}
+
+				ul.banner-social-buttons li:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			footer {
+				padding: 50px 0;
+			}
+
+			footer p {
+				margin: 0;
+			}
+
+			::-moz-selection {
+				text-shadow: none;
+				background: #fcfcfc;
+				background: rgba(255,255,255,.2);
+			}
+
+			::selection {
+				text-shadow: none;
+				background: #fcfcfc;
+				background: rgba(255,255,255,.2);
+			}
+
+			img::selection {
+				background: 0 0;
+			}
+
+			img::-moz-selection {
+				background: 0 0;
+			}
+
+			body {
+				webkit-tap-highlight-color: rgba(255,255,255,.2);
+			}
+
+			.irc-icon {
+				font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size: 1.0em;
+				color: #FFFFFF;
+				padding: 3px;
+				border-radius: 10px;
+			}
+
+			.btn-default:hover .irc-icon {
+				color: #43488A;
+			}
+
+			.project-css .js-nav {
+				display: none;
+			}
+
+			.intro-body {
+				padding-top: 15em;
+			}
+			#news-sticker {
+				position: absolute;
+				top: 0px;
+				left: 55%;
+				float: outside;
+			}
+			#news-sticker ul li a:hover,#news-sticker ul li a:focus{
+				box-shadow:10px 10px 7px rgba(0,0,0,.7);
+				-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+				-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+				-webkit-transform: scale(1.25);
+				-moz-transform: scale(1.25);
+				-o-transform: scale(1.25);
+				position:relative;
+				z-index:5;
+			}
+			#news-sticker h2,p{
+				font-size:100%;
+				font-weight:normal;
+			}
+			#news-sticker ul,li{
+				list-style:none;
+			}
+			#news-sticker ul{
+				overflow:hidden;
+				padding:3em;
+			}
+			#news-sticker ul li a{
+				text-decoration:none;
+				color:#3a3d60;
+				background:#FFF;
+				display:block;
+				height:10em;
+				width:10em;
+				padding:1em;
+				-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+				-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+				box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+				-moz-transition:-moz-transform .15s linear;
+				-o-transition:-o-transform .15s linear;
+				-webkit-transition:-webkit-transform .15s linear;
+			}
+			#news-sticker ul li{
+				margin:1em;
+				float:left;
+			}
+			#news-sticker ul li h2{
+				font-size:1.0em;
+				font-weight:bold;
+				//padding-bottom:10px;
+			}
+			#news-sticker ul li p{
+				font-family:"Reenie Beanie",arial,sans-serif;
+				font-size:0.9em;
+			}
+			#news-sticker ul li a{
+				-webkit-transform: rotate(-6deg);
+				-o-transform: rotate(-6deg);
+				-moz-transform:rotate(-6deg);
+			}
+			@media(min-width:767px) {
+			}
+		</style>
+
+	</head>
+
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="https://demo.hubzilla.org">
+						<i class="fa fa-desktop"></i>  <span class="light">Demo</span> 
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#top">Hubzilla</a>
+						</li>   
+						<li>
+							<a class="page-scroll" href="#learn">Learn</a>
+						</li>   
+						<li>
+							<a class="page-scroll" href="#discover">Discover</a>
+						</li>
+						<!--
+						 <li>
+							 <a class="page-scroll" href="#faq">FAQ</a>
+						 </li>
+						-->
+						<li>
+							<a class="page-scroll" href="#download">Download</a>
+						</li>
+						<li>    
+							<a class="page-scroll" href="#develop">Develop</a>
+						</li>
+						<li>    
+							<a class="page-scroll" href="https://dev.hubzilla.org/channel/announcements/">News</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+
+		<div class="intro-body intro" >
+			<div class="container">
+				<div class="row">
+					<div>
+						<img class="img-responsive hubzillabanner" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/newhubzillabanner.png"/>
+					</div></div>
+				<div class="row">
+					<div> 
+						<p class="lead">Hubzilla is a powerful platform for creating interconnected websites 
+							featuring a decentralized identity, communications, and permissions 
+							framework built using common webserver technology.</p>
+					</div>
+				</div>
+				<div class="row"  style="padding-top: 50px;">
+					<div >
+						<div class="col-lg-1 col-md-1 col-sm-3 col-lg-offset-4 col-md-offset-3 col-sm-offset-2"><a class="btn btn-default btn-lg" href="https://demo.hubzilla.org">Try a demo</a></div> 
+						<div class="col-lg-1 col-md-1 col-sm-1 col-lg-offset-1 col-md-offset-2 col-sm-offset-2"><a class="btn btn-default btn-lg" href="https://dev.hubzilla.org/help/admin/administrator_guide">Run your own hub</a></div>
+						<div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 50px;">
+							<a href="#learn" class="btn btn-circle page-scroll">
+								<i class="fa fa-angle-double-down animated"></i>
+							</a>
+							<div id="news-sticker">
+								<ul>
+									<li>
+										<a href="https://github.com/redmatrix/hubzilla/releases/tag/2.2">
+											<h2>Hubzilla <font size="+2">2.2</font> released</h2>
+											<p>Get it while it's hot!</p>
+										</a>
+									</li>
+								</ul>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section id="learn" class="container content-section text-center">
+			<div class="row learn-section">
+
+				<div class="col-lg-6 col-md-6">
+					<img src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/decentralisation.png" class="img-responsive">
+					<div style="position:absolute ; top: 20%; right: 5%; color:#555555; width:50%;">
+					</div>
+					<div style="position:absolute ; bottom: 3%; left: 5%; color:#007A9A; width:55%;">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<h2>Decentralized network of hubs: the grid</h2>
+
+					<p>    Hubs are the servers that communicate with one another to propagate information across the network, or "grid". There is no central hub or single point of failure. Hubs can be connected to as many or as few other hubs as desired.
+					</p>
+					<h2>Channels and Connections</h2>
+
+					<p>    A channel is the fundamental (id)entity on the grid. A channel can represent many different things: a person, a blog, or a forum to name a few. Channels can make connections with other channels to share information with highly detailed permissions. Channels are addressed using a familiar channel@hub.domain format. 
+					</p>
+					<h2>Nomadic Identity and Cloning</h2>
+
+					<p>    Nomadic identity means true ownership of online identity. With Hubzilla, you don't have an account on a server, you own an identity that you can take with you across the grid. You can clone a channel across multiple hubs for resilience against network failures or censorship, or you can completely move a channel from one hub to another, taking your data and connections with you.
+					</p>
+				</div>
+
+			</div>
+			<div class="row learn-section">
+				<div class="col-lg-6 col-md-6">
+
+					<h2>Access control across the web</h2>
+
+					<p>
+						Typical websites are isolated and have no idea who is accessing their content, and controlled access to data is limited to permissions settings between individual accounts on a site. If you want to share information in a controlled way off-site, you're out of luck. Hubzilla enforces fine-grained permissions for information shared across the grid, and websites on hubs are identity-aware. Single sign-on allows seamless authentication across independent websites in a way never before possible.
+					</p>
+
+					<h2>Got Zot?</h2>
+
+					<p>Zot is a JSON-based web framework for implementing secure decentralised communications and services. 
+						It differs from many other communication protocols by building  communications on top of a 
+						decentralised identity and authentication framework. The authentication component is similar to 
+						OpenID conceptually but is insulated from DNS-based identities. Where possible remote authentication 
+						is silent and invisible. This provides a mechanism for internet scale distributed access control 
+						which is unobtrusive.</p>
+					<ul>
+						<li>completely decentralised communications</li>
+						<li>insulation from DNS based identity</li>
+						<li>node mobility</li>
+						<li>invisible or reduced "interaction" remote authentication</li>
+						<li>performance</li>
+					</ul>
+				</div>
+
+				<div class="col-lg-6 col-md-6">
+					<img src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/access_control.png" class="img-responsive">
+					<div style="position:absolute ; bottom: 0%; left: 25%; color:#007A9A; width:70%; background-color: #FFF;">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="discover" class="content-section text-center">
+			<div class="row discover-section">
+				<div class="container">
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/plugins.png" style="width: 200px; height: 200px;">
+						<h3>Plugins</h3>
+						<p class="text-justify">Hubzilla is extensible. Build entire web apps as plugins and leverage the power of the grid to handle access control and data distribution.</p>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/toolkit.png" style="width: 200px; height: 200px;">
+						<h3>Web Building Toolkit</h3>
+						<p class="text-justify">Use the Comanche webpage description language and the Webpages tool to build modular, identity-aware, and <i>shareable</i> web page elements.</p>
+
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/social.png" style="width: 200px; height: 200px;">
+						<h3>Social Networking</h3>
+						<p class="text-justify">Social networking is in Hubzilla's DNA, baked into its core. Use a channel to represent yourself and make connections (i.e., "friends") to share with others. Support for federation with Diaspora, Friendica and others via plugins.</p>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/filestorage.png" style="width: 200px; height: 200px;">
+						<h3>Cloud File Storage</h3>
+						<p class="text-justify">Connect your channel's file storage to your local filesystem using standard WebDAV. Share or publish your files with the ubiquitous fine-grained access control.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row discover-section">
+				<div class="container">
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/themes.png" style="width: 200px; height: 200px;">
+						<h3>Themes</h3>
+						<p class="text-justify">The web interface is highly customizable, with native support for theme development. Brand your hubs for <i>your</i> community or business.</p>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/events.png" style="width: 200px; height: 200px;">
+						<h3>Events</h3>
+						<p class="text-justify">Coordinate and share calendar events with anyone using the native calendar functionality. Import/export between popular calendar formats.</p>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/api.png" style="width: 200px; height: 200px;">
+						<h3>API</h3>
+						<p class="text-justify">A growing list of API functions enable independent apps to utilize hubs, extending the range of interconnected services on the grid to the limits of your imagination.</p>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<img alt="img" class="img-circle center-block drop-shadow hover-zoom" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/opensource.png" style="width: 200px; height: 200px;">
+						<h3>Freedom</h3>
+						<p class="text-justify">Hubzilla is open source! You have the freedom to use and modify the software to suit your needs. When it comes to privacy and data security, everyone should be able to review and improve the code.</p>
+					</div>
+				</div>    
+			</div>
+		</section>
+
+		<section id="download" class="content-section text-center">
+			<div class="row download-section">
+				<div class="container">
+					<div class="col-lg-8 col-lg-offset-2">
+						<h2>Download Hubzilla</h2>
+						<p>Hubzilla is free and open source software protecting <i>your</i> rights with an MIT license.</p>
+						<a href="https://github.com/redmatrix/hubzilla" class="btn btn-default btn-lg">Get the code</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="develop" class="content-section text-center">
+			<div class="row develop-section">
+				<div class="container">
+					<div class="col-lg-2 col-lg-offset-1">
+						<img alt="img" class="img-circle center-block drop-shadow" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/zot.png" style="width: 200px; height: 200px;"> 
+					</div>
+
+					<div class="col-lg-8 col-lg-offset-1">
+						<h2>Developers</h2>
+						<p>There is a lot of work to do, and that work needs developers. Be a part of something amazing. There are many ways you can contribute.</p>
+						<ul class="list-inline banner-social-buttons">
+							<li>
+								<a href="https://dev.hubzilla.org/channel/hubzilla" class="btn btn-default btn-lg"><img src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/hubzilla_logo_white_bkgd.png" width="25">&nbsp<span class="network-name"> On the grid</span></a>
+							</li>
+							<li>
+								<a href="https://riot.im/app/#/room/#hubzilla:matrix.org" class="btn btn-default btn-lg"><span class="network-name"><span class="">[m]</span>hubzilla</span></a>
+							</li>
+							<li>
+								<a href="https://github.com/redmatrix/hubzilla" class="btn btn-default btn-lg"><i class="fa fa-github"></i>&nbsp&nbsp<span class="network-name">Source Code</span></a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="donate" class="donate-section text-center"><div class="row donate-section">
+				<div class="container">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<h2>Donate to the Hubzilla Project</h2>
+						<ul class="list-inline banner-social-buttons"><li>
+								<a href="https://salt.bountysource.com/teams/hubzilla" class="btn btn-default btn-lg" title="BountySource"><img height="20" src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/img/bountysource_icon.png" alt="bountysource_icon.png" /> <span class="network-name">BountySource</span></a>
+							</li>
+						</ul></div>
+				</div>
+			</div>
+		</section>
+
+
+    <!-- jQuery -->
+    <script src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/vendor/jquery/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="https://project.hubzilla.org/cloud/hubzilla/hubzilla-project-website/js/hubzilla-project.js"></script>
+	
+	</body>
+</html>
